@@ -8,6 +8,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { WordFormComponent } from './word-form/word-form.component';
 import { WordSearchFormComponent } from './word-search-form/word-search-form.component';
 import { WordResultTableComponent } from './word-result-table/word-result-table.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { WordResultTableComponent } from './word-result-table/word-result-table.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

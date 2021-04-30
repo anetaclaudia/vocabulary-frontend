@@ -1,1 +1,35 @@
-<p>word-result-table works!</p>
+<div class="mx-3 my-3">
+  <p>Results for <b>'user input'</b> in <b>'selected language'</b></p>
+</div>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Sõna eesti keeles</th>
+    <th scope="col">Sõna tähendus eesti keeles</th>
+    <th scope="col">Word in English</th>
+    <th scope="col">Word definition in English</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let word of words">
+    <th scope="row">{{ word.id }}</th>
+    <td> {{ word.wordInEstonian }} </td>
+    <td>{{ word.wordDefinitionInEstonian }}</td>
+    <td>{{ word.wordInEnglish }}</td>
+    <td>{{ word.wordDefinitionInEnglish }}</td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="d-flex justify-content-between p-2">
+  <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="refreshWords()">
+  </ngb-pagination>
+
+  <select class="custom-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshWords()">
+    <option [ngValue]="2">2 items per page</option>
+    <option [ngValue]="4">4 items per page</option>
+    <option [ngValue]="6">6 items per page</option>
+  </select>
+</div>
