@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "vocabulary-frontend"
+    }
+  },
+  "defaultProject": "vocabulary-frontend",
+  "cli": {
+    "analytics": "735cf098-f01b-4754-827c-a7a878c5c704"
+  }
 }
