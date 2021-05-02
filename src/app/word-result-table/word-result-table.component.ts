@@ -7,54 +7,6 @@ const words: Word[] = [
     wordDefinitionInEstonian: 'lill',
     wordInEnglish: 'tulip',
     wordDefinitionInEnglish: 'flower'
-  },
-  {
-    wordInEstonian: 'tulp',
-    wordDefinitionInEstonian: 'veerg',
-    wordInEnglish: 'column',
-    wordDefinitionInEnglish: 'a thingy in table'
-  },
-  {
-    wordInEstonian: 'tulp',
-    wordDefinitionInEstonian: 'lill',
-    wordInEnglish: 'tulip',
-    wordDefinitionInEnglish: 'flower'
-  },
-  {
-    wordInEstonian: 'tulp',
-    wordDefinitionInEstonian: 'lill',
-    wordInEnglish: 'tulip',
-    wordDefinitionInEnglish: 'flower'
-  },
-  {
-    wordInEstonian: 'tulp',
-    wordDefinitionInEstonian: 'lill',
-    wordInEnglish: 'tulip',
-    wordDefinitionInEnglish: 'flower'
-  },
-  {
-    wordInEstonian: 'tulp',
-    wordDefinitionInEstonian: 'lill',
-    wordInEnglish: 'tulip',
-    wordDefinitionInEnglish: 'flower'
-  },
-  {
-    wordInEstonian: 'tulp',
-    wordDefinitionInEstonian: 'lill',
-    wordInEnglish: 'tulip',
-    wordDefinitionInEnglish: 'flower'
-  },
-  {
-    wordInEstonian: 'tulp',
-    wordDefinitionInEstonian: 'lill',
-    wordInEnglish: 'tulip',
-    wordDefinitionInEnglish: 'flower'
-  },
-  {
-    wordInEstonian: 'tulp',
-    wordDefinitionInEstonian: 'lill',
-    wordInEnglish: 'tulip',
-    wordDefinitionInEnglish: 'flower'
   }
 ];
 
