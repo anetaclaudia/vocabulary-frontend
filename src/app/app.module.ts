@@ -7,23 +7,24 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { WordFormComponent } from './word-form/word-form.component';
 import { WordSearchFormComponent } from './word-search-form/word-search-form.component';
-import { WordResultTableComponent } from './word-result-table/word-result-table.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     WordFormComponent,
-    WordSearchFormComponent,
-    WordResultTableComponent
+    WordSearchFormComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
