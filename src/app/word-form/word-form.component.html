@@ -1,22 +1,59 @@
- <form class="mx-3 my-3" [formGroup]="wordForm" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-      <label for="wordInEstonian" class="form-label">Sõna eesti keeles</label>
-      <input type="text" class="form-control" formControlName="wordInEstonian" id="wordInEstonian">
+<form class="mx-3 my-3" [formGroup]="wordForm" (ngSubmit)="onSubmit()">
+  <!--input field for adding estonian word-->
+  <div class="mb-3">
+    <label for="wordInEstonian" class="form-label">Sõna eesti keeles</label>
+    <input type="text" class="form-control" formControlName="wordInEstonian" id="wordInEstonian">
+    <!--    html for invalid input-->
+    <div *ngIf="wordInEstonian.invalid && (wordInEstonian.dirty || wordInEstonian.touched)"
+         class="alert alert-danger">
+      <div *ngIf="wordInEstonian.errors.required">
+        The word in Estonian is required.
+      </div>
     </div>
-    <div class="mb-3">
-      <label for="wordDefinitionInEstonian" class="form-label">Tähendus eesti keeles</label>
-      <textarea class="form-control" formControlName="wordDefinitionInEstonian" id="wordDefinitionInEstonian" rows="2"></textarea>
-    </div>
+  </div>
 
-    <div class="mb-3">
-      <label for="wordInEnglish" class="form-label">Word in English</label>
-      <input type="text" class="form-control" formControlName="wordInEnglish" id="wordInEnglish">
+  <!--   input field for adding definition in estonian-->
+  <div class="mb-3">
+    <label for="wordDefinitionInEstonian" class="form-label">Tähendus eesti keeles</label>
+    <textarea class="form-control" formControlName="wordDefinitionInEstonian" id="wordDefinitionInEstonian"
+              rows="2"></textarea>
+    <!--    html for invalid input-->
+    <div
+      *ngIf="wordDefinitionInEstonian.invalid && (wordDefinitionInEstonian.dirty || wordDefinitionInEstonian.touched)"
+      class="alert alert-danger">
+      <div *ngIf="wordDefinitionInEstonian.errors.required">
+        The word's English equivalent is required.
+      </div>
     </div>
-    <div class="mb-3">
-      <label for="wordDefinitionInEnglish" class="form-label">Definition in English</label>
-      <textarea class="form-control" formControlName="wordDefinitionInEnglish" id="wordDefinitionInEnglish" rows="2"></textarea>
-    </div>
+  </div>
 
-   <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  <!--  input field for adding english equivalent for the word-->
+  <div class="mb-3">
+    <label for="wordInEnglish" class="form-label">Word in English</label>
+    <input type="text" class="form-control" formControlName="wordInEnglish" id="wordInEnglish">
+    <!--    html for invalid input-->
+    <div *ngIf="wordInEnglish.invalid && (wordInEnglish.dirty || wordInEnglish.touched)"
+         class="alert alert-danger">
+      <div *ngIf="wordInEnglish.errors.required">
+        The word's English equivalent is required.
+      </div>
+    </div>
+  </div>
+
+  <!--   input field for adding definition in english-->
+  <div class="mb-3">
+    <label for="wordDefinitionInEnglish" class="form-label">Definition in English</label>
+    <textarea class="form-control" formControlName="wordDefinitionInEnglish" id="wordDefinitionInEnglish"
+              rows="2"></textarea>
+    <!--    html for invalid input-->
+    <div *ngIf="wordDefinitionInEnglish.invalid && (wordDefinitionInEnglish.dirty || wordDefinitionInEnglish.touched)"
+         class="alert alert-danger">
+      <div *ngIf="wordDefinitionInEnglish.errors.required">
+        The word's definition in English is required.
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="wordForm.invalid">Submit</button>
+</form>
 
