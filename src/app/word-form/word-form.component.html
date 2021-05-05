@@ -23,7 +23,7 @@
       *ngIf="wordDefinitionInEstonian.invalid && (wordDefinitionInEstonian.dirty || wordDefinitionInEstonian.touched)"
       class="alert alert-danger">
       <div *ngIf="wordDefinitionInEstonian.errors.required">
-        The word's English equivalent is required.
+        The word's definition in Estonian is required.
       </div>
       <div *ngIf="wordDefinitionInEstonian.errors.cannotContainSpace">The word's Estonian definition can't be
         whitespace.

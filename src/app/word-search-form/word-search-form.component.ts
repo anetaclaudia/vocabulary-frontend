@@ -25,7 +25,7 @@ export class WordSearchFormComponent implements OnInit {
   ngOnInit(): void {
     this.searchForm = new FormGroup({
       searchWord: new FormControl('' ),
-      language: new FormControl(null)
+      language: new FormControl(Language.EST)
     });
   }
 

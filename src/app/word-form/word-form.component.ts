@@ -20,9 +20,9 @@ export class WordFormComponent implements OnInit {
   ngOnInit(): void {
     this.wordForm = new FormGroup({
         wordInEstonian: new FormControl('', [Validators.required, InputValidator.cannotContainSpace]),
-        wordDefinitionInEstonian: new FormControl('', [Validators.required, InputValidator.cannotContainSpace]),
+        wordDefinitionInEstonian: new FormControl('', [Validators.required]),
         wordInEnglish: new FormControl('', [Validators.required, InputValidator.cannotContainSpace]),
-        wordDefinitionInEnglish: new FormControl('', [Validators.required, InputValidator.cannotContainSpace])
+        wordDefinitionInEnglish: new FormControl('', [Validators.required])
       }
     );
   }
