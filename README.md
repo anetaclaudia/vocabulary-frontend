@@ -1,27 +1,19 @@
-# VocabularyFrontend
+# Test assignment for Telia Software Development Internship
+The assignment is to build a small web-application for an Estonian-English dictionary.
+The application's back-end is built with Spring Boot, front-end is built with Angular.
+The application's back-end is available [here](https://github.com/anetaclaudia/vocabulary-backend)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
+## Prerequisites
+Make sure you have Node.js installed on your device, and it is added to your environment variable.
 
-## Development server
+## Running the application locally
+These instructions only include running application's front-end. To see instructions about back-end, go see [back-end's project](https://github.com/anetaclaudia/vocabulary-backend)
+1. Download or clone the project.
+2. Open the project in your preferred IDE or run it form commandline.
+3. Open IDE's inner terminal - make sure your directory is `vocabulary-frontend`. If you're running the project from the command line, same goes here - switch into the project directory.
+   - In your project directory, run `npm install` - it should add all the needed node modules.
+   - Add Angular CLI to the project. For that, run `npm install -g @angular/cli`
+   - Run `npm run ng build`
+   - Run `ng serve`
+   - Application's front-end should be accessible from your browser on `http://localhost:4200/`. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
