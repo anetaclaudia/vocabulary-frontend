@@ -4,6 +4,7 @@
     <label for="searchWord" class="mx-2">Search</label>
     <input id="searchWord" type="text" class="form-control mr-3" formControlName="searchWord"
            placeholder="Enter the search word">
+<!--    <div *ngIf="searchWord.errors.minlength" class="alert alert-danger"> Input can't be empty</div>-->
     <!--    input for search word's language-->
     <label for="language" class="mx-2">Choose language</label>
     <select id="language" class="form-control mr-3" formControlName="language">
@@ -16,7 +17,7 @@
 <!--result for the search word-->
 <div>
   <div class='empty-result' *ngIf="empty">
-    No results found.
+    <p class="mx-2 my-2">No results found.</p>
   </div>
   <table class="table table-striped">
     <thead>

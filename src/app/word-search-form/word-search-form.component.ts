@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Language} from '../model/Language';
-import {FormControl, FormGroup, AbstractControl} from '@angular/forms';
+import {FormControl, FormGroup, AbstractControl, Validators} from '@angular/forms';
 import {WordService} from '../service/word.service';
 import {Word} from '../model/Word';
 
@@ -24,7 +24,7 @@ export class WordSearchFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.searchForm = new FormGroup({
-      searchWord: new FormControl('' ),
+      searchWord: new FormControl('', Validators.minLength(2) ),
       language: new FormControl(Language.EST)
     });
   }

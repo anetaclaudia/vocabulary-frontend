@@ -30,16 +30,15 @@ export class WordFormComponent implements OnInit {
   onSubmit(): void {
     const word: Word = this.wordForm.value as Word;
     console.log(word);
-    this.wordService.addWord(word).subscribe(_ => {
-      console.log('subscribing');
-    });
+    if (this.wordForm.valid){
+      this.wordService.addWord(word).subscribe(_ => {
+        console.log('subscribing');
+      });
+      this.wordForm.reset();
+    }
   }
 
-  noWhitespaceValidator(control: AbstractControl): ValidationErrors | null {
-    const isWhitespace = (control.value || '').trim().length === 0;
-    const isValid = !isWhitespace;
-    return isValid ? null : {whitespace: true};
-  }
+
 
   get wordInEstonian(): AbstractControl {
     return this.wordForm.get('wordInEstonian');
