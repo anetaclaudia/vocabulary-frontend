@@ -3,7 +3,7 @@ The assignment is to build a small web-application for an Estonian-English dicti
 The application's back-end is built with Spring Boot, front-end is built with Angular.
 The application's back-end is available [here](https://github.com/anetaclaudia/vocabulary-backend)
 
-## Prerequisites
+## Prerequisites for running the application
 Make sure you have Node.js installed on your device, and it is added to your environment variable.
 
 ## Running the application locally
