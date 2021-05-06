@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Language} from '../model/Language';
-import {FormControl, FormGroup, AbstractControl, Validators} from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
 import {WordService} from '../service/word.service';
 import {Word} from '../model/Word';
 
@@ -13,34 +13,25 @@ export class WordSearchFormComponent implements OnInit {
   public words: Word[];
 
   searchForm: FormGroup;
-
   languages = Object.values(Language);
-
-  empty = false;
+  isEmpty = false;
 
   constructor(private wordService: WordService) {
-
   }
 
   ngOnInit(): void {
     this.searchForm = new FormGroup({
-      searchWord: new FormControl('', Validators.minLength(2) ),
+      searchWord: new FormControl(''),
       language: new FormControl(Language.EST)
     });
   }
 
   onSubmit(): void {
-    console.log(this.searchForm.value.searchWord, this.searchForm.value.language);
     this.wordService
       .searchWords(this.searchForm.value.searchWord, this.searchForm.value.language)
       .subscribe(words => {
-      this.words = words;
-
-      this.empty = this.words.length === 0;
-    });
-  }
-
-  get searchWord(): AbstractControl {
-    return this.searchForm.get('searchForm');
+        this.words = words;
+        this.isEmpty = this.words.length === 0;
+      });
   }
 }

@@ -4,15 +4,17 @@ The application's back-end is built with Spring Boot, front-end is built with An
 The application's back-end is available [here](https://github.com/anetaclaudia/vocabulary-backend)
 
 ## Prerequisites for running the application
+###### What do I add to env variables exactly?
 Make sure you have Node.js installed on your device, and it is added to your environment variable.
 
 ## Running the application locally
 These instructions only include running application's front-end. To see instructions about back-end, go see [back-end's project](https://github.com/anetaclaudia/vocabulary-backend)
 1. Download or clone the project.
-2. Open the project in your preferred IDE or run it form commandline.
-3. Open IDE's inner terminal - make sure your directory is `vocabulary-frontend`. If you're running the project from the command line, same goes here - switch into the project directory.
+2. Open the project in your preferred IDE or run it from the command-line.
+3. Open IDE's inner terminal - make sure you are in `vocabulary-frontend` directory. If you're running the project from the command line, same goes here - switch into the project directory.
    - In your project directory, run `npm install` - it should add all the needed node modules.
-   - Add Angular CLI to the project. For that, run `npm install -g @angular/cli`
+     ###### -g is global, does it work without?
+   - Install Angular CLI `npm install -g @angular/cli`
    - Run `npm run ng build`
    - Run `ng serve`
    - Application's front-end should be accessible from your browser on `http://localhost:4200/`. 

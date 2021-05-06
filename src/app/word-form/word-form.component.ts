@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, Validators} from '@angular/forms';
+import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {WordService} from '../service/word.service';
 import {Word} from '../model/Word';
 import {InputValidator} from '../validators/input.validator';
@@ -29,16 +29,11 @@ export class WordFormComponent implements OnInit {
 
   onSubmit(): void {
     const word: Word = this.wordForm.value as Word;
-    console.log(word);
     if (this.wordForm.valid){
-      this.wordService.addWord(word).subscribe(_ => {
-        console.log('subscribing');
-      });
+      this.wordService.addWord(word).subscribe();
       this.wordForm.reset();
     }
   }
-
-
 
   get wordInEstonian(): AbstractControl {
     return this.wordForm.get('wordInEstonian');

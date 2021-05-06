@@ -4,9 +4,8 @@
     <label for="searchWord" class="mx-2">Search</label>
     <input id="searchWord" type="text" class="form-control mr-3" formControlName="searchWord"
            placeholder="Enter the search word">
-<!--    <div *ngIf="searchWord.errors.minlength" class="alert alert-danger"> Input can't be empty</div>-->
     <!--    input for search word's language-->
-    <label for="language" class="mx-2">Choose language</label>
+    <label for="language" class="mx-2">Choose a language</label>
     <select id="language" class="form-control mr-3" formControlName="language">
       <option *ngFor="let language of languages" [ngValue]="language">{{language}}</option>
     </select>
@@ -16,22 +15,22 @@
 
 <!--result for the search word-->
 <div>
-  <div class='empty-result' *ngIf="empty">
+  <div class='empty-result' *ngIf="isEmpty">
     <p class="mx-2 my-2">No results found.</p>
   </div>
   <table class="table table-striped">
     <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Sõna eesti keeles</th>
-      <th scope="col">Sõna tähendus eesti keeles</th>
+      <th scope="col">Word in Estonian</th>
+      <th scope="col">Word definition in Estonian</th>
       <th scope="col">Word in English</th>
       <th scope="col">Word definition in English</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let word of words">
-      <th scope="row">{{ word.id }}</th>
+    <tr *ngFor="let word of words; let i = index;">
+      <th scope="row">{{ i+1 }}</th>
       <td> {{ word.wordInEstonian }} </td>
       <td>{{ word.wordDefinitionInEstonian }}</td>
       <td>{{ word.wordInEnglish }}</td>

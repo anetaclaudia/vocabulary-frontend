@@ -12,8 +12,7 @@ export class WordService{
 
   httpOptions = {headers: new HttpHeaders({ 'Content-Type': 'application/json' })};
 
-  constructor(
-    private http: HttpClient) {
+  constructor(private http: HttpClient) {
   }
 
   /** GET words from the server with search term and chosen language, i.e. /words?word=test&language=EST */
@@ -27,7 +26,6 @@ export class WordService{
 
   /** POST - add a new word to the server */
   addWord(word: Word): Observable<Word>{
-    console.log('adding word');
     return this.http.post<Word>(this.url, word, this.httpOptions);
   }
 }
