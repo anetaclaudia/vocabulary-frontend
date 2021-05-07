@@ -7,7 +7,6 @@ import {Word} from '../model/Word';
 @Component({
   selector: 'app-word-search-form',
   templateUrl: './word-search-form.component.html',
-  styleUrls: ['./word-search-form.component.scss']
 })
 export class WordSearchFormComponent implements OnInit {
   public words: Word[];
